@@ -75,3 +75,16 @@ async function onSubmit(payload: FormSubmitEvent<Schema>) {
         </UPageCard>
     </div>
 </template>
+
+
+<!-- <script setup>
+definePageMeta({
+    layout: 'auth'
+})
+</script>
+
+<template>
+    <div>
+        <h1>Login ทดสอบ</h1>
+    </div>
+</template> -->
