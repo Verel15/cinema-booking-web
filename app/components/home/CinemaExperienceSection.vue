@@ -34,7 +34,7 @@ const links = ref<ButtonProps[]>([
 </script>
 
 <template>
-  <section class="bg-gray-950 px-8 md:px-16 lg:px-24">
+  <section class="bg-white dark:bg-gray-950 px-8 md:px-16 lg:px-24">
     <UPageSection
       title="Experience Cinema Like Never Before"
       description="CineX delivers a premium cinematic journey with state-of-the-art technology, world-class sound, and ultimate comfort — every visit is an unforgettable experience."

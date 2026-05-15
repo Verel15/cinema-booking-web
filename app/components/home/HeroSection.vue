@@ -161,9 +161,9 @@ const emit = defineEmits<{
     <!-- Search bar -->
     <div class="px-4 md:px-8 lg:px-16 mb-6">
       <div
-        class="relative border rounded-xl border-gray-800 bg-gray-900/80 backdrop-blur-xs"
+        class="relative border rounded-xl border-white/30 dark:border-white/10 bg-white/40 dark:bg-gray-900/50 backdrop-blur-xs"
       >
-        <div class="flex flex-col divide-y divide-gray-800 md:flex-row md:items-stretch md:divide-y-0 md:divide-x">
+        <div class="flex flex-col divide-y divide-white/20 dark:divide-white/10 md:flex-row md:items-stretch md:divide-y-0 md:divide-x">
           <div class="flex min-w-0 flex-1 flex-col justify-center px-6 py-4 md:py-5">
             <span
               class="text-primary mb-1.5 text-xs font-bold uppercase tracking-widest"
@@ -174,7 +174,7 @@ const emit = defineEmits<{
               v-model="selectedCinema"
               :items="cinemaOptions"
               variant="none"
-              class="font-semibold text-white"
+              class="font-semibold text-gray-900 dark:text-white"
             />
           </div>
 
@@ -185,12 +185,12 @@ const emit = defineEmits<{
               Date
             </span>
             <div class="flex items-center justify-between gap-2">
-              <span class="truncate font-semibold text-white">{{
+              <span class="truncate font-semibold text-gray-900 dark:text-white">{{
                 displayDate
               }}</span>
               <UIcon
                 name="i-lucide-calendar"
-                class="size-5 shrink-0 text-gray-400"
+                class="size-5 shrink-0 text-gray-400 dark:text-gray-400"
               />
             </div>
           </div>
@@ -205,7 +205,7 @@ const emit = defineEmits<{
               v-model="selectedExperience"
               :items="experienceOptions"
               variant="none"
-              class="font-semibold text-white"
+              class="font-semibold text-gray-900 dark:text-white"
             />
           </div>
 

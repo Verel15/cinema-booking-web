@@ -21,16 +21,16 @@ const grid = [
 </script>
 
 <template>
-  <section class="bg-gray-950 px-4 py-10 sm:px-8 sm:py-14 md:px-16 lg:px-24">
+  <section class="bg-white dark:bg-gray-950 px-4 py-10 sm:px-8 sm:py-14 md:px-16 lg:px-24">
     <!-- Header -->
     <div class="mb-6 sm:mb-8 flex items-end justify-between">
       <div>
         <h2
-          class="text-2xl sm:text-3xl lg:text-4xl font-black italic uppercase text-white tracking-tight"
+          class="text-2xl sm:text-3xl lg:text-4xl font-black italic uppercase text-gray-900 dark:text-white tracking-tight"
         >
           Now Showing
         </h2>
-        <p class="mt-1 text-xs sm:text-sm text-gray-400">
+        <p class="mt-1 text-xs sm:text-sm text-gray-500 dark:text-gray-400">
           Premium experiences in every screen
         </p>
       </div>

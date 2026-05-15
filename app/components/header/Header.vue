@@ -3,6 +3,13 @@ import type { NavigationMenuItem } from '@nuxt/ui';
 const toast = useToast();
 const { user, clearAuth } = useAuth();
 const route = useRoute();
+const colorMode = useColorMode();
+
+const isDark = computed(() => colorMode.value === 'dark');
+
+function toggleColorMode() {
+  colorMode.preference = isDark.value ? 'light' : 'dark';
+}
 
 const items = computed<NavigationMenuItem[]>(() => [
   {
@@ -52,15 +59,33 @@ async function logout() {
 <template>
   <UHeader>
     <template #title>
-      <img src="~/assets/images/CineXLogo.png" alt="logo cinex" class="h-24" />
+      <img
+        src="~/assets/images/CineXLogoWhite.png"
+        alt="CineX"
+        class="h-24 object-contain dark:block hidden"
+      />
+      <img
+        src="~/assets/images/CineXLogo.png"
+        alt="CineX"
+        class="h-24 object-contain dark:hidden block"
+      />
     </template>
     <UNavigationMenu :items="items" />
     <template #right>
+      <UTooltip :text="isDark ? 'Light mode' : 'Dark mode'">
+        <UButton
+          :icon="isDark ? 'i-lucide-sun' : 'i-lucide-moon'"
+          color="neutral"
+          variant="ghost"
+          @click="toggleColorMode"
+          :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
+        />
+      </UTooltip>
       <div
         class="flex items-center gap-3 border-l border-gray-200 pl-3 dark:border-gray-800"
       >
         <div class="text-sm">{{ user?.email }}</div>
-        <UTooltip text="Log in">
+        <UTooltip text="Log out">
           <UButton
             color="error"
             variant="ghost"

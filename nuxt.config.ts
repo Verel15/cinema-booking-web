@@ -30,6 +30,6 @@ export default defineNuxtConfig({
     },
   },
   colorMode: {
-    preference: 'dark', // options: 'system', 'dark', 'light'
+    preference: 'system',
   },
 });

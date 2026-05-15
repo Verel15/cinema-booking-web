@@ -56,23 +56,23 @@ function scrollRight() {
 </script>
 
 <template>
-  <section class="bg-transparent px-4 py-10 sm:px-8 sm:py-14 md:px-16 lg:px-24">
+  <section class="bg-gray-100 dark:bg-gray-900 px-4 py-10 sm:px-8 sm:py-14 md:px-16 lg:px-24">
     <!-- Header -->
     <div class="mb-6 sm:mb-8 flex items-center justify-between">
       <h2
-        class="text-2xl sm:text-3xl lg:text-4xl font-black italic uppercase text-white tracking-tight"
+        class="text-2xl sm:text-3xl lg:text-4xl font-black italic uppercase text-gray-900 dark:text-white tracking-tight"
       >
         Coming Soon
       </h2>
       <div class="flex gap-2 sm:gap-3">
         <button
-          class="flex size-8 sm:size-10 items-center justify-center rounded-full border border-white/20 text-white transition-all duration-200 hover:border-primary hover:text-primary hover:bg-primary/10 cursor-pointer"
+          class="flex size-8 sm:size-10 items-center justify-center rounded-full border border-gray-300 dark:border-white/20 text-gray-600 dark:text-white transition-all duration-200 hover:border-primary hover:text-primary hover:bg-primary/10 cursor-pointer"
           @click="scrollLeft"
         >
           <UIcon name="i-lucide-arrow-left" class="size-3.5 sm:size-4" />
         </button>
         <button
-          class="flex size-8 sm:size-10 items-center justify-center rounded-full border border-white/20 text-white transition-all duration-200 hover:border-primary hover:text-primary hover:bg-primary/10 cursor-pointer"
+          class="flex size-8 sm:size-10 items-center justify-center rounded-full border border-gray-300 dark:border-white/20 text-gray-600 dark:text-white transition-all duration-200 hover:border-primary hover:text-primary hover:bg-primary/10 cursor-pointer"
           @click="scrollRight"
         >
           <UIcon name="i-lucide-arrow-right" class="size-3.5 sm:size-4" />
@@ -118,12 +118,12 @@ function scrollRight() {
         <!-- Info -->
         <div class="mt-3 px-0.5">
           <h3
-            class="text-base font-black italic text-white leading-snug transition-colors duration-300 group-hover:text-primary"
+            class="text-base font-black italic text-gray-900 dark:text-white leading-snug transition-colors duration-300 group-hover:text-primary"
           >
             {{ movie.title }}
           </h3>
           <p
-            class="mt-0.5 text-sm text-gray-500 transition-colors duration-300 group-hover:text-gray-300"
+            class="mt-0.5 text-sm text-gray-500 transition-colors duration-300 group-hover:text-gray-700 dark:group-hover:text-gray-300"
           >
             {{ movie.genre }}
           </p>
